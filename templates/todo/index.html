@@ -4,7 +4,7 @@
 
 {% if messages %}
 {% for message in messages %}
-<h1 class="text-success">{{ message }}</h1>
+<h3 class="text-success">{{ message }}</h3>
 {% endfor %}
 {% endif %}
 
@@ -35,10 +35,10 @@
             </div>
             <div class="col-md-6 text-md-end">
                 {% if todo.completed != True %}
-                <a href="{% url 'complete_task' todo.id %}" class="btn btn-success">Completed</a>
+                <a href="{% url 'complete_task' todo.id %}" class="btn btn-success btn-sm">Completed</a>
                 {% endif %}
-                <a href="{% url 'update' todo.id %}" class="btn btn-primary">Update</a>
-                <a href="{% url 'delete' todo.id %}" class="btn btn-danger">Delete</a>
+                <a href="{% url 'update' todo.id %}" class="btn btn-primary btn-sm">Update</a>
+                <a href="{% url 'delete' todo.id %}" class="btn btn-danger btn-sm">Delete</a>
             </div>
         </div>
     </div>
